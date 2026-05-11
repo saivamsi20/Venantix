@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: expense-intelligence-platform
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/Venantix
+    username: postgres
+    password: 2519
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+jwt:
+  secret: my-256-bit-secret-key-for-jwt-signing-12345
+  expiration: 86400000
